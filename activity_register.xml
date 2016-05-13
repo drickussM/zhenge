@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kedaexpress.com.kedaexpressapp.Register">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:id="@+id/newUsernameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_username"
+            android:textSize="17dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/new_username"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:maxLength="15"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/usernameText" />
+
+
+        <TextView
+            android:id="@+id/phoneNumberText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_phone_number"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/new_username"/>
+
+        <EditText
+            android:id="@+id/new_phoneNumber"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:maxLength="11"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneNumberText"/>
+
+        <TextView
+            android:id="@+id/passwordText"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_password"
+            android:textSize="17dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/new_phoneNumber"/>
+
+        <EditText
+            android:id="@+id/new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint"
+            android:maxLength="15"
+            android:inputType="textPassword"
+            android:layout_below="@+id/passwordText" />
+
+        <TextView
+            android:id="@+id/confirmNewPasswordText"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_confirm_password"
+            android:textSize="17dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/new_password"/>
+
+        <EditText
+            android:id="@+id/confirm_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:layout_below="@+id/confirmNewPasswordText"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/register_bn_label"
+            style="?android:textAppearanceSmall"
+            android:textSize="18dp"
+            android:layout_below="@+id/confirm_new_password"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_selecter"
+            android:textColor="@color/textColor"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

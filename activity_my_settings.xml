@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context="com.kedaexpress.com.kedaexpressapp.MySettings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+    <TextView
+        android:id="@+id/dft_ownerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DefaultOwner"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/dft_owner"
+        android:layout_width="200dp"
+        android:maxLength="15"
+        android:layout_marginTop="-8dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dft_ownerTxt"/>
+
+    <TextView
+        android:id="@+id/dft_phoneNumberTxt"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/dft_ownerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DefaultPhoneNo"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/dft_phoneNumber"
+        android:layout_marginTop="65dp"
+        android:layout_width="200dp"
+        android:inputType="number"
+        android:maxLength="11"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dft_phoneNumberTxt"/>
+
+        <TextView
+            android:id="@+id/dft_roomText"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/dft_phoneNumberTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DefaultRoomNo"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/dft_room"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/dft_phoneNumberTxt"
+            android:layout_width="100dp"
+            android:maxLength="5"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dft_roomText"/>
+
+            <Button
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/dft_room"
+                android:id="@+id/saveSettingsBn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Save"/>
+
+    <ImageView
+        android:id="@+id/updPassImg"
+        android:layout_marginTop="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dft_room"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/uu"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/UPDATEPASSWORD"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/updPassImg"/>
+    </RelativeLayout>
+</RelativeLayout>

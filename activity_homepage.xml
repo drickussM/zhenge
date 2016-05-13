@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.kedaexpress.com.kedaexpressapp.Homepage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/companyText"
+            android:layout_width="wrap_content"
+            android:text="@string/Delivery_Company"
+            android:textSize="15dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/company_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:scrollbarStyle="insideInset"
+            android:layout_below="@+id/companyText"/>
+
+        <TextView
+            android:id="@+id/PackOwnerNameText"
+            android:layout_width="wrap_content"
+            android:text="@string/Pack_Owner_Name"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/company_spinner"/>
+
+        <EditText
+            android:id="@+id/packowner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:maxLength="15"
+            android:layout_below="@+id/PackOwnerNameText"/>
+
+        <TextView
+            android:id="@+id/phoneNumberText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_phone_number"
+            android:textSize="15dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/packowner"/>
+
+        <EditText
+            android:id="@+id/ownerPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:maxLength="11"
+            android:inputType="number"
+            android:layout_below="@+id/phoneNumberText"/>
+
+        <TextView
+            android:id="@+id/pickUpCodeText"
+            android:layout_width="wrap_content"
+            android:text="@string/Pickup_Code"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ownerPhoneNumber"/>
+
+        <EditText
+            android:id="@+id/pickUpCode"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:maxLength="5"
+            android:layout_below="@+id/pickUpCodeText"/>
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:text="@string/Date"
+            android:textSize="15dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pickUpCode"/>
+
+        <Spinner
+            android:id="@+id/date_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scrollbarStyle="insideInset"
+            android:layout_below="@+id/dateText"/>
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:text="@string/Time"
+            android:textSize="15dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_spinner"/>
+
+        <Spinner
+            android:id="@+id/time_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scrollbarStyle="insideInset"
+            android:layout_below="@+id/timeText"/>
+
+        <TextView
+            android:id="@+id/buildingText"
+            android:layout_width="wrap_content"
+            android:text="@string/Building"
+            android:textSize="15dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_spinner"/>
+
+        <Spinner
+            android:id="@+id/building_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scrollbarStyle="insideInset"
+            android:layout_below="@+id/buildingText"/>
+
+        <TextView
+            android:id="@+id/roomText"
+            android:layout_width="wrap_content"
+            android:text="@string/Room"
+            android:textSize="15dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/building_spinner"/>
+
+        <EditText
+            android:id="@+id/room"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:maxLength="4"
+            android:layout_below="@+id/roomText"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/iAgree"
+            android:id="@+id/agreementCheckBox"
+            android:checked="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/room"/>
+
+        <TextView
+            android:id="@+id/regulationLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agreementTitle"
+            android:layout_marginTop="7.5dp"
+            android:layout_below="@+id/room"
+            android:layout_marginLeft="-7dp"
+            android:textSize="14dp"
+            android:textColor="@color/blue"
+            android:layout_toRightOf="@+id/agreementCheckBox"/>
+
+        <Button
+            android:id="@+id/submitBn"
+            android:layout_width="344dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/agreementCheckBox"
+            android:layout_centerHorizontal="true"
+            android:text="@string/submit_bn"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/textColor"
+            android:background="@drawable/button_selecter" />
+
+    </RelativeLayout>
+</LinearLayout>
