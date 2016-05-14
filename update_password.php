@@ -3,7 +3,7 @@ require "init.php";
 
 $oldPassword = $_POST["oldPassword"];
 $newPassword = $_POST["newPassword"];
-$confnewPass = $POST["confnewPass"]
+$confnewPass = $POST["confnewPass"];
 $username = $_POST["username"];
 
 $query = "SELECT * FROM user_info where username = '$username' and password = '$oldPassword'";
